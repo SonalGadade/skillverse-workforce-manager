@@ -10,10 +10,10 @@ FROM eclipse-temurin:17-jre
 WORKDIR /app
 
 # Install Xvfb and native graphics libraries for JavaFX (Debian 12 compatible)
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y \
     xvfb \
     libgl1 \
-    libgl1-mesa-dri \
+    libglx-mesa0 \
     libgtk-3-0 \
     libxtst6 \
     libxrender1 \
