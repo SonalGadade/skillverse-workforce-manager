@@ -1,0 +1,22 @@
+# Build output
+target/
+*.class
+
+# Secrets & Credentials
+serviceAccountKey.json
+src/main/resources/serviceAccountKey.json
+
+# IDE & Editor files
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log

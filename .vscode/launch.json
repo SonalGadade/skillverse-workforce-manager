@@ -1,0 +1,42 @@
+/*{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch SkillVerse AI (AppLauncher)",
+            "request": "launch",
+            "mainClass": "com.skillverse.AppLauncher",
+            "projectName": "final-skill-verse"
+        },
+        {
+            "type": "java",
+            "name": "Launch SkillVerse AI (MainApp)",
+            "request": "launch",
+            "mainClass": "com.skillverse.MainApp",
+            "projectName": "final-skill-verse"
+        }
+    ]
+}*/
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.skillverse.Main",
+            "projectName": "final-skill-verse"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "first_project_fc61f8ff",
+            "vmArgs": "--module-path \"C://java 26//project//openjfx-21.0.12_windows-x64_bin-sdk//javafx-sdk-21.0.12//lib\" --add-modules javafx.controls,javafx.fxml"
+        }
+    ]
+}
