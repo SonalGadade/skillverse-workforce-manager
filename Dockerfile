@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y \
     libasound2t64 \
     && rm -rf /var/lib/apt/lists/*
 
-COPY --from=build /app/target/*.jar app.jar
+# Specifically copy the shaded executable jar
+COPY --from=build /app/target/*shaded.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
