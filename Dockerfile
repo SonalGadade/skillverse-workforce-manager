@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
     libxtst6 \
     libxrender1 \
     libasound2t64 \
-    netcat-openbsd \
+    python3 \
     && rm -rf /var/lib/apt/lists/*
 
 COPY --from=build /app/target/final-skill-verse-*.jar /app/app.jar
@@ -25,4 +25,4 @@ COPY --from=build /app/target/final-skill-verse-*.jar /app/app.jar
 ENV PORT=8080
 EXPOSE 8080
 
-ENTRYPOINT ["sh", "-c", "while true; do { echo -e 'HTTP/1.1 200 OK\r\nContent-Length: 2\r\n\r\nOK'; } | nc -l -p 8080 -q 1; done & Xvfb :99 -screen 0 1024x768x16 & export DISPLAY=:99 && java -cp /app/app.jar com.skillverse.AppLauncher"]
+ENTRYPOINT ["sh", "-c", "python3 -m http.server 8080 --bind 0.0.0.0 & Xvfb :99 -screen 0 1024x768x16 & export DISPLAY=:99 && java -cp /app/app.jar com.skillverse.AppLauncher"]
